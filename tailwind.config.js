@@ -6,7 +6,11 @@ module.exports = {
   theme: {
     extend: {},
     colors: {
-      "test2": "#ffffff"
+      "alFilo-black": "#000000",
+      "alFilo-gray-100": "#333333",
+      "alFilo-gray-200": "#262626",
+      "alFilo-white": "#ffffff",
+      "alFilo-blue": "#0394cc",
     }
   },
   plugins: [
@@ -19,7 +23,7 @@ module.exports = {
     themes: [
       {
         alfilo: {
-          primary: "#333333",
+          primary: "#000000",
           "primary-focus": "#8cb9ca",
           secondary: "#ffffff",
           accent: "#0394cc",

@@ -1,4 +1,4 @@
-<div class="navbar bg-base-200 sticky top-0 z-50">
+<div class="navbar bg-alFilo-gray-200 sticky top-0 z-50">
   <div  class="navbar-start">
       <div class="avatar lg:absolute lg:top-1 lg:left-20 ">
         <div class="w-10 rounded  lg:w-36">
@@ -6,23 +6,23 @@
         </div>
       </div>
   </div>
-  <div class="navbar-end lg:justify-center">
-    <ul class="menu menu-horizontal bg-primary hidden lg:inline-flex">
-      <li><a routerLink="" class="hover:bg-primary-focus text-primary-content">CLAN</a></li>
-      <li><a routerLink="/wiki" class="hover:bg-primary-focus text-primary-content">WIKI</a></li>
-      <li><a class="hover:bg-primary-focus text-primary-content">MERCHANDISING</a></li>
-      <li><a class="hover:bg-primary-focus text-primary-content">CUENTA</a></li>
-    </ul>
+
+  <div class="navbar-end lg:justify-end ">
+    <div class="tabs hidden lg:inline-flex">
+      <a *ngFor="let item of navItems" routerLink="{{item.path}}" (click)="toggleActive(item)"  class="tab" [ngClass]="{'text-alFilo-blue' : item.active, 'text-alFilo-white' : !item.active}">{{item.name}}</a>
+    </div>
+
     <div class="dropdown dropdown-end">
       <label tabindex="0" class="btn btn-ghost lg:hidden">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
       </label>
       <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-200 rounded-box w-52">
-        <li><a>CLAN</a></li>
-        <li><a>WIKI</a></li>
-        <li><a>MERCHANDISING</a></li>
-        <li><a>CUENTA</a></li>
+        <li *ngFor="let item of navItems"><a routerLink="{{item.path}}" (click)="toggleActive(item)" [ngClass]="{'text-alFilo-blue' : item.active, 'text-alFilo-white' : !item.active}">{{item.name}}</a></li>
       </ul>
     </div>
+
+    <button class="btn mx-24">Cuenta</button>
+
+
   </div>
 </div>

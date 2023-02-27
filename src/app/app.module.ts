@@ -8,6 +8,7 @@ import { NavBarComponent } from './component/nav-bar/nav-bar.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { LandingComponent } from './component/landing/landing.component';
 import { WikiComponent } from './component/wiki/wiki.component';
+import { TiendaComponent } from './component/tienda/tienda.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { WikiComponent } from './component/wiki/wiki.component';
     NavBarComponent,
     FooterComponent,
     LandingComponent,
-    WikiComponent
+    WikiComponent,
+    TiendaComponent
   ],
   imports: [
     BrowserModule,
