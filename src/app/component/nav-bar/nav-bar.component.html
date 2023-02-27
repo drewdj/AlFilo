@@ -1,10 +1,10 @@
-<div class="navbar bg-alFilo-gray-200 sticky top-0 z-50">
+<div class="navbar bg-alFilo-black absolute sticky top-0 z-50">
   <div  class="navbar-start">
-      <div class="avatar lg:absolute lg:top-1 lg:left-20 ">
-        <div class="w-10 rounded  lg:w-36">
-            <img src="assets/img/logo.png" alt="Tailwind-CSS-Avatar-component" />
-        </div>
+    <div class="avatar lg:absolute lg:top-1 lg:left-20 ">
+      <div class="w-10 rounded  lg:w-36">
+        <img src="assets/img/logo.png" alt="Tailwind-CSS-Avatar-component" />
       </div>
+    </div>
   </div>
 
   <div class="navbar-end lg:justify-end ">
@@ -21,8 +21,29 @@
       </ul>
     </div>
 
-    <button class="btn mx-24">Cuenta</button>
+    <label for="my-drawer-3"  class="btn lg:mx-24">Cuenta</label>
+  </div>
+</div>
 
+<div class="drawer drawer-end fixed">
+  <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
+  <div class="drawer-content flex flex-col">
+    <!-- Navbar -->
+
+    <!-- Page content here -->
+    <router-outlet></router-outlet>
+    <app-footer></app-footer>
+  </div>
+
+
+  <div class="drawer-side">
+    <label for="my-drawer-3" class="drawer-overlay"></label>
+    <ul class="menu p-4 w-80 bg-base-100">
+      <!-- Sidebar content here -->
+      <li><a>Sidebar Item 1</a></li>
+      <li><a>Sidebar Item 2</a></li>
+
+    </ul>
 
   </div>
 </div>
